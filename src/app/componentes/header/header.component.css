@@ -1,0 +1,33 @@
+header {
+  background-color: #016145;
+  height: 96px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container-header{
+  cursor: pointer;
+  border: 2px solid #fff;
+  padding: 10px;
+}
+
+header h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 29px;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-style: normal;
+  font-weight: 400;
+}
+
+h1 img{
+  width: 18%;
+  margin-right: 10px;
+}
+
+

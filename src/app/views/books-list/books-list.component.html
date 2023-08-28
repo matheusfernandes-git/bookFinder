@@ -1,0 +1,30 @@
+<section class="container">
+  <header>Que livro você procura?</header>
+  <div class="busca">
+    <input type="search" [formControl]="searchField">
+    <button>
+      <img src="assets/imagens/icons8-search-30.png" alt="Lupa de cor roxa">
+    </button>
+  </div>
+  <p>Busque por assunto, autoria, nome...</p>
+  <div class="resultados mensagem-erro" *ngIf="errorMsg">
+    {{ errorMsg }}
+  </div>
+  <div class="resultados" *ngIf="findBooks$ | async ">
+    {{ BooksResult.totalItems }} resultados encontrados
+  </div>
+  <div class="container-card" *ngIf="findBooks$ | async as bookList, else home">
+    <div *ngFor="let book of bookList">
+      <app-book [book]="book"></app-book>
+    </div>
+  </div>
+  <ng-template #home>
+    <div class="imagens">
+      <h1 class="titulo">Busque o livro <br> que quiser na <br> nossa estante!</h1>
+      <img
+        class="ilustracao"
+        src="../../assets/imagens/teste2.png"
+        alt="Ilustração de uma pessoa em pé ao lado de uma estante com livros e plantas"
+      >
+    </div>
+  </ng-template>
