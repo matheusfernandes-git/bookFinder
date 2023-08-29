@@ -9,15 +9,15 @@
         <p class="informacoes">Autoria:</p>
         <p class="resultado">{{ book.authors }}</p>
         <p class="informacoes">Data de publicação:</p>
-        <p class="resultado">{{ book.publishedDate | date: 'dd/MM/yyyyyy' }}</p>
+        <p class="resultado">{{ book.publishedDate | date: 'dd/MM/yyyy' }}</p>
         <p class="informacoes">Editora:</p>
         <p class="resultado">{{ book.publisher }}</p>
         <button (click)="readPrevious()" class="detalhes">Ler prévia</button>
     </div>
     </div>
       <button
-      (click)="closeModal()"
-      class="botao-fechar"
+        (click)="closeModal()"
+        class="botao-fechar"
       >
         <span class="material-symbols-outlined">
           close
@@ -25,7 +25,7 @@
       </button>
     <div class="sinopse">
       <h4 class="informacoes">Sinopse</h4>
-      <p class="resultado">{{ book.description | slice: 0:960 }}</p>
+      <p class="resultado">{{ book.description | slice: 0:950 }}</p>
     </div>
   </div>
   <div class="overlay"></div>
